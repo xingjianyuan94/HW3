@@ -11,10 +11,14 @@
         double hourlyrate = Double.parseDouble(request.getParameter("rate"));
         int hoursovertime = totalhourworked - 40;///////////////
         double overtimerate = hourlyrate * 1.5;
-        double grosspay = hourlyrate * 40 + overtimerate * (totalhourworked - 40); // 
+        if (hoursovertime <0)
+            hoursovertime = 0;
+        double grosspay = hourlyrate * totalhourworked + hoursovertime * 0.5; // 
         double pretaxdeduct = Double.parseDouble(request.getParameter("pre"));
         double pretaxpay = grosspay - pretaxdeduct;
         double taxamout = 0.22 * pretaxpay; //
+        if(grosspay<=500)
+            taxamout = 0.18 * pretaxpay;
         double posttaxpay = pretaxpay - taxamout;
         double posttaxdeduct = Double.parseDouble(request.getParameter("post"));
         double netpay = posttaxpay - posttaxdeduct;
