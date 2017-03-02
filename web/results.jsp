@@ -2,6 +2,7 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <link rel="stylesheet" type="text/css" href="style.css">
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>User Information</title>
     </head>
@@ -27,7 +28,7 @@
     <body>
         <h1>Salary Info</h1>
         <hr>
-        <table border="1">
+        <table border="1" id="result">
             <tbody>
                 <tr>
                     <td>Total Hours Worked:</td>

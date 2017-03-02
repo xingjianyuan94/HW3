@@ -1,7 +1,28 @@
 body
 {
 background-color: #65BDDE;
-width:30%;
 font-family: Arial;
 text-align: center;
+}
+
+table
+{
+   text-align: right;
+   font-family: Arial;
+   color:white;
+   margin-left: 38%;
+   
+}
+
+#result
+{
+ background: white;
+ color:black;
+ outline:1px solid black;
+}
+
+h1
+{
+ color: white;
+ font-size: 50px;
 }
